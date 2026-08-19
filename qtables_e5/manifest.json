@@ -1,0 +1,11 @@
+{
+  "source": "E2 Nash, deterministic retrain",
+  "checksums": {
+    "seed_2_agent_0.npz": "56b7aa3ddc605f14ca7cf7280cc2747e06c49592d536de360f0ecc1e93652069",
+    "seed_2_agent_1.npz": "f8d244eeb8eabffe89c7cf207b0ba61e1b3b45d037c508e885060f7e9399a41a",
+    "seed_4_agent_0.npz": "a9e00810e97def7ecdf0fc0bcbd4fce58f27057efc10cab08036f974f78509b7",
+    "seed_4_agent_1.npz": "1f05a21127fd4b7db7a6ec9e13278f7e926cea4aac49bad8a0d6dc91c498579a",
+    "seed_3_agent_0.npz": "a557858777317b7ab5d8d2424e228976042d35aa74d27534efb9344a93c8dfe9",
+    "seed_3_agent_1.npz": "e8bbe7fe77f19e272a1507c3f0e47b06dd757addfbf4a768a883a7be607e3c9c"
+  }
+}

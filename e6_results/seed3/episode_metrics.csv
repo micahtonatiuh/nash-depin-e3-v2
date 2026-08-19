@@ -1,0 +1,2 @@
+episode,phase,r0,r1,tasks0,tasks1,collisions,cooperations,cell_err0_m,cell_err1_m,duration_s
+1,frozen,16.0,16.0,0,0,0,8,0.274,0.091,397.2

@@ -1,0 +1,7 @@
+numpy>=1.24.0
+pyyaml>=6.0
+matplotlib>=3.7.0
+pytest>=7.3.0
+nashpy>=0.0.40
+# Running the physical robots additionally requires ROS2 Humble (rclpy),
+# which is installed via the ROS distribution, not pip.

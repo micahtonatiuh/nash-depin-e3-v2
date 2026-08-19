@@ -1,0 +1,8 @@
+{
+  "criterion": "Gini < 0.15 in E2 and stable (validate_e2_convergence)",
+  "seeds": [
+    2,
+    4,
+    3
+  ]
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+rosbag2_*/
+*.db3

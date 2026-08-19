@@ -1,0 +1,77 @@
+# =====================================================================
+# e5_config.yaml — HETEROGENEOUS run: LoCoBot (agent 0) + TurtleBot4 (agent 1)
+#
+# Despite the generic filename, this is the CROSS-HARDWARE configuration
+# whose results are in e6_results/ (12 steps per episode). For the
+# homogeneous TB4xTB4 runs use e5_config_tb4x2.yaml instead.
+# The filename is kept because it is the default of run_e5.py --config.
+#
+# Rewards are IDENTICAL to E2 — do not modify, they guarantee the
+# sim-to-real comparison.
+# =====================================================================
+
+experiment: "physical_transfer_locobot_tb4"
+
+robot_platform:
+  - locobot
+  - tb4
+
+# --- Environment (exact mirror of the E2 environment) ---
+environment:
+  task_cell: [0, 0]            # fixed station (same as E2 num_tasks=1)
+  start_cells: [[4, 0], [0, 4]]  # agent_0, agent_1
+  steps_per_episode: 12                 # cross-hardware runs use 12
+  task_reward: 10.0            # = E2
+  collision_penalty: -5.0      # = E2
+  cooperation_reward: 2.0      # = E2
+  coop_distance: 1             # = E2 (Manhattan)
+
+# --- Physical mapping / calibration / motion control ---
+physical:
+  grid_size: 5
+  cell_size_m: 0.618           # 3.0 x 3.0 m arena
+  cell_error_max_m: 0.15       # per-cell drift threshold
+  origin_x_m: 0.0              # odom-x of cell (0,0). Calibrate per arena.
+  origin_y_m: 0.0              # odom-y of cell (0,0). Calibrate per arena.
+  linear_speed: 0.2            # m/s, conservative for odometric accuracy
+  angular_speed: 0.5           # rad/s
+  pos_tolerance_m: 0.03        # tolerance when closing the one-cell advance
+  yaw_tolerance_rad: 0.05      # tolerance when closing the rotation (~2.9 deg)
+
+# --- Phases ---
+phases:
+  frozen_episodes: 20
+  finetune_episodes: 30
+  safety_episodes: 5           # reduced speed for the first N episodes
+  save_every: 5                # save Q-tables every N eps during finetune
+
+# --- Learning (PhysicalNashTeam) ---
+learning:
+  alpha_finetune: 0.05         # fine-tuning rate
+  gamma: 0.95                  # = E2
+  epsilon: 0.05                # exploration in finetune (forced to 0 in frozen)
+  use_equity: true             # egalitarian refinement
+
+# --- Transferred Q-tables (overridden by --seed) ---
+qtables:
+  agent_0: qtables_e5/seed_2_agent_0.npz
+  agent_1: qtables_e5/seed_2_agent_1.npz
+
+# --- Preregistered threshold (see README on the scope of physical Gini) ---
+hypothesis:
+  gini_median_max: 0.15
+
+# --- ROS2 (TurtleBot4 side) ---
+ros:
+  cmd_vel_topic: "cmd_vel"     # published on /{namespace}/cmd_vel
+  odom_topic: "odom"           # subscribed on /{namespace}/odom
+  robots:
+    - namespace: "tb2"
+
+# --- ROS2 (LoCoBot side; Kobuki base, no namespace prefix) ---
+locobot_ros:
+  odom_topic: "/odom"
+  cmd_vel_topic: "/commands/velocity"
+  linear_speed: 0.1
+  angular_speed: 0.4
+  yaw_tolerance_rad: 0.12
