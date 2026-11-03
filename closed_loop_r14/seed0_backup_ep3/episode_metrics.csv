@@ -1,0 +1,4 @@
+episode,loop,steps_ref,steps_phy,first_divergence,logical_match,cell_track_rate,err_med_m,err_max_m,term_err0_m,term_err1_m,manual_ok,tasks0,tasks1,handovers,collisions,gini,duration_s
+1,closed,200,200,,1,1.0,0.047,0.193,0.032,0.182,1,137,60,3,7,0.1478,288.2
+2,closed,200,200,,1,1.0,0.066,0.12,0.091,0.101,1,104,93,4,7,0.0211,222.7
+3,closed,200,200,124,0,0.97,0.099,0.825,0.117,0.234,1,190,6,2,8,0.3583,395.0

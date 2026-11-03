@@ -1,0 +1,55 @@
+{
+ "tape_version": 1,
+ "seed": 0,
+ "starts": [
+  [
+   0,
+   0
+  ],
+  [
+   4,
+   4
+  ]
+ ],
+ "steps": 200,
+ "episodes": 10,
+ "policy": "sigma",
+ "epsilon": 0.05,
+ "stale_cut": 40,
+ "loop": "closed",
+ "config": "config/e5_config_tb4x2.yaml",
+ "environment": {
+  "task_cell": [
+   0,
+   0
+  ],
+  "start_cells": [
+   [
+    4,
+    0
+   ],
+   [
+    0,
+    4
+   ]
+  ],
+  "steps_per_episode": 200,
+  "task_reward": 10.0,
+  "collision_penalty": -5.0,
+  "cooperation_reward": 2.0,
+  "coop_distance": 1
+ },
+ "qtables": {
+  "seed_0_agent_0.npz": "5c374cd6f897731346af4a940abb6c7d2b78b08f39c497b2861d459e3da7c650",
+  "seed_0_agent_1.npz": "ec98470b977aa4c0f24b9944b6e438cb5d0a3b35e5d903e38afff721897c1029"
+ },
+ "code": {
+  "experiments/run_e5.py": "ef4a9bcf844d961e71d54e5d03fe2dabb8f30496df8f62c00c41a24539688c43",
+  "nash_depin/nash_solver.py": "b67e8e820891efb2933f2e1fa19c71be629266240f1c8786b903fd5170759ea2",
+  "revision_r14/tape_core.py": "394982a7faaaeee99e6f04084b632628dbf5728e72eef74828e19ceb88ac90d5",
+  "revision_r14/run_e5_tape.py": "3ff990aef63243fc3908a5add92ebecaf07f2aae8b57800eb4a3c3748a297d6d"
+ },
+ "numpy": "2.2.6",
+ "python": "3.10.12",
+ "created": "2026-10-12 12:36:06"
+}

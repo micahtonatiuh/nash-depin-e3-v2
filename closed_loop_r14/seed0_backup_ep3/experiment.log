@@ -1,0 +1,52 @@
+2026-10-12 12:36:06,490 Reference (simulation) per episode:
+2026-10-12 12:36:06,490   ep  steps  tasks(R0,R1)  hand-overs  moves  collisions  Gini
+2026-10-12 12:36:06,490    1    200  [137, 60]              3     29           7  0.148
+2026-10-12 12:36:06,490    2    200  [104, 93]              4     31           7  0.021
+2026-10-12 12:36:06,490    3    200  [170, 26]              2     34          10  0.283
+2026-10-12 12:36:06,490    4    200  [200, 0]               0     15           7  0.376
+2026-10-12 12:36:06,490    5    200  [101, 97]              2     30           7  0.008
+2026-10-12 12:36:06,490    6    200  [147, 51]              2     23           2  0.178
+2026-10-12 12:36:06,490    7    200  [184, 13]              2     27           4  0.324
+2026-10-12 12:36:06,490    8    200  [129, 67]              4     33           5  0.119
+2026-10-12 12:36:06,490    9    200  [200, 0]               0     13           6  0.373
+2026-10-12 12:36:06,490   10    200  [118, 75]              5     31           2  0.082
+2026-10-12 12:36:06,490 Mean moves per episode: 27 (rough duration: 3 min per episode)
+2026-10-12 12:36:06,547 Waiting for odometry of robot 0...
+2026-10-12 12:36:16,718 Waiting for odometry of robot 1...
+2026-10-12 12:36:16,881 
+--- Episode 1/10 [closed loop] (SAFETY SPEED) --- reference: 200 steps, tasks [137, 60], 3 hand-overs
+2026-10-12 12:36:16,881 Place the robots at [[0, 0], [4, 4]] and press ENTER...
+2026-10-12 12:36:33,174 [EP-START] measured cells [[0, 0], [4, 4]] (expected [[0, 0], [4, 4]])
+2026-10-12 12:41:21,326 Final commanded cells: [[1, 0], [0, 0]]
+2026-10-12 12:45:23,225 Ep 1: logical match YES | cell tracking 1.000 | err med 0.047 m | tasks [137, 60] | hand-overs 3 | 4.8 min
+2026-10-12 12:45:23,225 Terminal cell error > 0.15 m. Re-place the robots before the next episode.
+2026-10-12 12:45:23,225 
+--- Episode 2/10 [closed loop] --- reference: 200 steps, tasks [104, 93], 4 hand-overs
+2026-10-12 12:45:23,225 Place the robots at [[0, 0], [4, 4]] and press ENTER...
+2026-10-12 12:47:11,497 [EP-START] measured cells [[0, 0], [4, 4]] (expected [[0, 0], [4, 4]])
+2026-10-12 12:50:54,241 Final commanded cells: [[0, 0], [1, 0]]
+2026-10-12 12:53:38,318 Ep 2: logical match YES | cell tracking 1.000 | err med 0.066 m | tasks [104, 93] | hand-overs 4 | 3.7 min
+2026-10-12 12:53:38,318 
+--- Episode 3/10 [closed loop] --- reference: 200 steps, tasks [170, 26], 2 hand-overs
+2026-10-12 12:53:38,318 Place the robots at [[0, 0], [4, 4]] and press ENTER...
+2026-10-12 12:55:38,716 [EP-START] measured cells [[0, 0], [4, 4]] (expected [[0, 0], [4, 4]])
+2026-10-12 12:59:02,699 Robot 1 did not complete the primitive (step 123).
+2026-10-12 12:59:02,762 step 123: measured [[0, 0], [1, 1]] != commanded [[0, 0], [1, 0]] -> policy continues from the measured cells
+2026-10-12 12:59:37,179 Robot 0 did not complete the primitive (step 151).
+2026-10-12 12:59:37,239 step 151: measured [[0, 0], [1, 0]] != commanded [[0, 1], [1, 0]] -> policy continues from the measured cells
+2026-10-12 13:00:02,446 Robot 1 did not complete the primitive (step 173).
+2026-10-12 13:00:02,509 step 173: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:00:22,549 Robot 1 did not complete the primitive (step 174).
+2026-10-12 13:00:22,613 step 174: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:00:42,651 Robot 1 did not complete the primitive (step 175).
+2026-10-12 13:00:42,713 step 175: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:01:02,721 Robot 1 did not complete the primitive (step 176).
+2026-10-12 13:01:02,784 step 176: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:02:13,766 Final commanded cells: [[0, 1], [1, 0]]
+2026-10-12 13:03:24,286 Ep 3: logical match NO (diverges at step 124) | cell tracking 0.970 | err med 0.099 m | tasks [190, 6] | hand-overs 2 | 6.6 min
+2026-10-12 13:03:24,286 Terminal cell error > 0.15 m. Re-place the robots before the next episode.
+2026-10-12 13:03:24,287 
+--- Episode 4/10 [closed loop] --- reference: 200 steps, tasks [200, 0], 0 hand-overs
+2026-10-12 13:03:24,287 Place the robots at [[0, 0], [4, 4]] and press ENTER...
+2026-10-12 13:10:05,753 
+Paused (Ctrl+C). Resume with --resume.

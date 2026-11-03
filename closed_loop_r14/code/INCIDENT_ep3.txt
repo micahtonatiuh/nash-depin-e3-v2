@@ -1,0 +1,33 @@
+--- Episode 3/10 [closed loop] --- reference: 200 steps, tasks [170, 26], 2 hand-overs
+2026-10-12 12:53:38,318 Place the robots at [[0, 0], [4, 4]] and press ENTER...
+
+2026-10-12 12:55:38,716 [EP-START] measured cells [[0, 0], [4, 4]] (expected [[0, 0], [4, 4]])
+2026-10-12 12:59:02,699 Robot 1 did not complete the primitive (step 123).
+2026-10-12 12:59:02,762 step 123: measured [[0, 0], [1, 1]] != commanded [[0, 0], [1, 0]] -> policy continues from the measured cells
+2026-10-12 12:59:37,179 Robot 0 did not complete the primitive (step 151).
+2026-10-12 12:59:37,239 step 151: measured [[0, 0], [1, 0]] != commanded [[0, 1], [1, 0]] -> policy continues from the measured cells
+2026-10-12 13:00:02,446 Robot 1 did not complete the primitive (step 173).
+2026-10-12 13:00:02,509 step 173: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:00:22,549 Robot 1 did not complete the primitive (step 174).
+2026-10-12 13:00:22,613 step 174: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:00:42,651 Robot 1 did not complete the primitive (step 175).
+2026-10-12 13:00:42,713 step 175: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:01:02,721 Robot 1 did not complete the primitive (step 176).
+2026-10-12 13:01:02,784 step 176: measured [[0, 1], [1, 0]] != commanded [[0, 1], [0, 0]] -> policy continues from the measured cells
+2026-10-12 13:02:13,766 Final commanded cells: [[0, 1], [1, 0]]
+  Real cell of robot 0 (row col, Enter=skip): 0 1
+  Real cell of robot 1 (row col, Enter=skip): 1 0
+2026-10-12 13:03:24,286 Ep 3: logical match NO (diverges at step 124) | cell tracking 0.970 | err med 0.099 m | tasks [190, 6] | hand-overs 2 | 6.6 min
+2026-10-12 13:03:24,286 Terminal cell error > 0.15 m. Re-place the robots before the next episode.
+2026-10-12 13:03:24,287 
+--- Episode 4/10 [closed loop] --- reference: 200 steps, tasks [200, 0], 0 hand-overs
+2026-10-12 13:03:24,287 Place the robots at [[0, 0], [4, 4]] and press ENTER...
+^C2026-10-12 13:10:05,753 
+Paused (Ctrl+C). Resume with --resume.
+Traceback (most recent call last):
+
+
+urtle@turtle-Dell-Pro-Micro-Plus-QBM1250:~/nash-depin-e5/revision_r14$ r14reset
+waiting for service to become available...
+^Cwaiting for service to become available...
+

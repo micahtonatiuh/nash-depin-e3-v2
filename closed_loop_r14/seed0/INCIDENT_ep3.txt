@@ -1,0 +1,5 @@
+Seed 0, episodio 3 (12 oct 2026): robot 1 no completó la primitiva 6 veces; reset_pose dejó de responder.
+Revisión 14 oct 2026: la PC no descubría las Create3 por DDS (Wi-Fi). Robots sanos: /odom a 20 Hz dentro de cada robot.
+Causas: interfaz Tailscale activa en la PC + descubrimiento multicast intermitente. [cable USB suelto: sí/no, en qué robot]
+Solución: tailscale down; Fast DDS con IPs fijas (~/fastdds_wlan.xml). Política, Q-tables y protocolo sin cambios.
+Decisión: ep 3 se declara abortado por falla de comunicación y se repite aparte (seed0_ep3_repeat).
